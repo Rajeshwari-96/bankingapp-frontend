@@ -1,0 +1,20 @@
+<h1 class="text-center">Create Account</h1>
+<div *ngIf="accountCreate" class="alert alert-success">
+    Account Created Successfully
+</div>
+<div class="col-md-8 offset-md-3">
+<form (ngSubmit)="onSubmit()">
+<div class="form-group">
+    <label>Account Holder Name</label>
+    <input type="text" id="account_holder_name" name="account_holder_name" class="form-control" placeholder="Enter Account Holder Name"
+    [(ngModel)]="account.account_holder_name"/>
+</div>
+<div>
+    <label>Account Balance</label>
+    <input type="text" id="account_balance" name="account_balance" class="form-control" placeholder="Enter Balance"
+    [(ngModel)]="account.account_balance"/>
+</div><br>
+<button type="submit" class="btn btn-success">Submit</button>
+
+</form>
+</div>
